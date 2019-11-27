@@ -1,0 +1,18 @@
+{
+    "tabBar": {
+    "list": [{
+      "pagePath": "pages/irig/irig",
+      "text": "text",
+      "iconPath": "pages/image/tabbar/home.jpg",
+      "selectedIconPath": "pages/image/tabbar/home.jpg"
+    },
+    {
+      "pagePath": "pages/irig/irig",
+      "text": "text",
+      "iconPath": "pages/image/tabbar/home.jpg",
+      "selectedIconPath": "pages/image/tabbar/home.jpg"
+    }]
+  },
+
+  "usingComponents": {}
+}

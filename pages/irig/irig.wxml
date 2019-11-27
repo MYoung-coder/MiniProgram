@@ -1,0 +1,25 @@
+<view class="box">
+  <text>Switch State & Control </text>
+</view>
+<view class="box">
+  <view class="box1">
+  <switch class="box2" checked="{{switch1Checked}}" bindchange="switch1Change">Realy1</switch>
+  <switch class="box2" checked="{{switch2Checked}}" bindchange="switch2Change">Realy2</switch>
+</view>
+  <view class="box1">
+  <switch class="box2" checked="{{switch3Checked}}" bindchange="switch3Change">Realy3</switch>
+  <switch class="box2" checked="{{switch4Checked}}" bindchange="switch4Change">Realy4</switch>
+  </view>
+  <view class="box1">
+  <switch class="box2" checked="{{switch5Checked}}" bindchange="switch5Change">Realy5</switch>
+  <switch class="box2" checked="{{switch6Checked}}" bindchange="switch6Change">Realy6</switch>
+  </view>
+  <view class="box1">
+  <switch class="box2" checked="{{switch7Checked}}" bindchange="switch7Change">Realy7</switch>
+  <switch class="box2" checked="{{switch8Checked}}" bindchange="switch8Change">Realy8</switch>
+  </view>
+</view>
+
+<view class="box">
+  <text>环境数据监测 </text>
+</view>
