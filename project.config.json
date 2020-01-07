@@ -4,11 +4,16 @@
 		"ignore": []
 	},
 	"setting": {
+<<<<<<< HEAD
 		"urlCheck": false,
+=======
+		"urlCheck": true,
+>>>>>>> 925a1791b883e6faab1d3612198e761bd3ef6787
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+<<<<<<< HEAD
 		"coverView": true,
 		"autoAudits": false,
 		"checkInvalidKey": true,
@@ -19,6 +24,10 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		}
+=======
+		"autoAudits": false,
+		"coverView": true
+>>>>>>> 925a1791b883e6faab1d3612198e761bd3ef6787
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.9.4",

@@ -1,5 +1,6 @@
 {
   "pages": [
+<<<<<<< HEAD
    
     "pages/control/control",
     "pages/test/test",
@@ -39,4 +40,37 @@
     ]
   },
   "sitemapLocation": "sitemap27.json"
+=======
+    
+    "pages/index/index",
+    "pages/irig/irig",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Smart Agriculture",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "pages/image/tabbar/home1.jpg",
+        "selectedIconPath": "pages/image/tabbar/home2.jpg"
+      },
+      {
+        "pagePath": "pages/irig/irig",
+        "text": "控制",
+        "iconPath": "pages/image/tabbar/control1.jpg",
+        "selectedIconPath": "pages/image/tabbar/control2.jpg"
+      }
+    ]
+  },  
+
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+>>>>>>> 925a1791b883e6faab1d3612198e761bd3ef6787
 }
