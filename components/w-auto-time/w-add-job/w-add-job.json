@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "新建打卡任务",
+    "usingComponents": {
+      "w-add-checkbox": "/components/w-auto-time/w-add-checkbox/w-add-checkbox"
+    }
+}

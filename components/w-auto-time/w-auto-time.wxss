@@ -1,0 +1,18 @@
+/* components/w-auto-time/w-auto-time.wxss */
+.create{
+  margin-top: 80rpx;
+  padding: 0 26rpx;
+}
+.create .btn{
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #2fcc85;
+  color: #fff;
+}
+.create .button-hover{
+  background-color: #2caf6d;
+  color: #aadfc4;
+}
+.job_list{
+  
+}

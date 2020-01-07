@@ -1,0 +1,13 @@
+<!--components/w-auto-time/w-auto-time.wxml-->
+
+<view class="create">
+    <!-- 按钮跳转至新建任务界面 -->
+    <button class="btn {{creating ? 'disabled' : ''}}" bindtap="gotoPage">{{button.txt}}</button>
+</view>
+
+<view calss="job_list">   
+
+job_list
+
+
+</view>

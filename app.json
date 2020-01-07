@@ -1,0 +1,42 @@
+{
+  "pages": [
+   
+    "pages/control/control",
+    "pages/test/test",
+    "pages/home/home",
+    "pages/pi_data/pi_data",
+    "pages/logs/logs",
+    "components/w-auto-time/w-add-job/w-add-job"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "我是标题",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#DCDCDC"
+  },
+  "tabBar": {
+    "selectedColor": "#ff5777",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "主页",
+        "iconPath": "assets/image/tabbar/home1.jpg",
+        "selectedIconPath": "assets/image/tabbar/home2.jpg"
+      },
+      {
+        "pagePath": "pages/control/control",
+        "text": "控制",
+        "iconPath": "assets/image/tabbar/control.jpg",
+        "selectedIconPath": "assets/image/tabbar/control_active.jpg"
+      },
+      {
+        "pagePath": "pages/pi_data/pi_data",
+        "text": "数据",
+        "iconPath": "assets/image/tabbar/data1.jpg",
+        "selectedIconPath": "assets/image/tabbar/data2.jpg"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap27.json"
+}

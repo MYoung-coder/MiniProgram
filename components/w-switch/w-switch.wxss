@@ -1,0 +1,22 @@
+/* components/switch/w-switch.wxss */
+.box{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40rpx;
+  box-sizing: border-box;
+}
+
+.box1 {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin: 10rpx
+
+}
+.box2 {
+position: relative;
+margin: 40rpx
+
+}

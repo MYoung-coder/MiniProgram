@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "w-tab-control": "/components/w-tab-control/w-tab-control",
+    "w-switch": "/components/w-switch/w-switch",
+    "w-auto-time": "/components/w-auto-time/w-auto-time",
+    "w-auto-model": "/components/w-auto-model/w-auto-model",
+    "w-calendar": "/components/w-calendar/w-calendar"
+  }
+
+}
