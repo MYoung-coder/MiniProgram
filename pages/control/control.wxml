@@ -4,7 +4,7 @@
 
 
 <!-----如果选中'手动'展示  switch  ------->
-<!-- <w-switch wx:if="{{currentType=='手动'}}"/> -->
+<w-switch wx:if="{{currentType=='手动'}}"/>
 
 
 <!-----如果选中'定时'展示  time  ------->
