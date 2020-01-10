@@ -1,11 +1,12 @@
 {
   "pages": [
     "pages/control/control",
+    "components/w-auto-time/w-add-task/w-add-task",
     "pages/test/test",
     "pages/home/home",
     "pages/pi_data/pi_data",
-    "pages/logs/logs",
-    "components/w-auto-time/w-add-job/w-add-job"
+    "pages/logs/logs"
+    
   ],
   "window": {
     "backgroundTextStyle": "dark",

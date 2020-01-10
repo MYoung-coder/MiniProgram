@@ -3,6 +3,7 @@ Component({
   /**
    * 组件的属性列表
    */
+
   properties: {
 
   },
@@ -21,13 +22,21 @@ Component({
       { name: 7, value: 'Relay7' },
       { name: 8, value: 'Relay8' },]
   },
-
+  
   /**
    * 组件的方法列表
    */
   methods: {
     checkboxChange: function (e) {
       console.log('checkbox发生change事件，携带value值为：', e.detail.value)
+
+      // this.triggerEvent('Select_Relay',{
+      //   num: 22222
+      // })
+
+      this.triggerEvent('selectRelay', {
+        select_pipe: e.detail.value
+        })
     }
   }
 })

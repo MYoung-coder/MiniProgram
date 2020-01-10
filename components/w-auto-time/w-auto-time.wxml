@@ -1,27 +1,19 @@
 <!--components/w-auto-time/w-auto-time.wxml-->
-
+ <!-- 按钮跳转至新建任务界面 -->
 <view class="create">
-    <!-- 按钮跳转至新建任务界面 -->
-    <button class="btn {{creating ? 'disabled' : ''}}" bindtap="gotoPage">{{button.txt}}</button>
+  <button class="btn {{creating ? 'disabled' : ''}}" bindtap="addTask">
+  
+  <text class="button_txt">{{button.txt}}
+  </text>
+  </button>
 </view>
 
-<view calss="job_list">   
 
-job_list
+ <!-- 按钮跳转至新建任务界面 -->
 
-
-</view>
-
-<view calss="job_list">   
-
-job_list
-
-
-</view>
-
-<view calss="job_list">   
-
-job_list
-
-
-</view>
+  <view class="task" wx:for="{{task_name_list}}" wx:key="{{item}}">
+   
+     <text> {{item}}</text>
+     <button class="task_button"size="mini">123</button> 
+    
+  </view>

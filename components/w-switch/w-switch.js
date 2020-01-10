@@ -122,7 +122,7 @@ Component({
 
     Statecheck: function (optinons) {
       wx.request({
-        url: 'http://www.causgh.com:1996/wechat_control',
+        url: 'http://localhost:1996/w_manual',
         method: "POST",
         data: {
           'data': 0,
@@ -143,7 +143,7 @@ Component({
       const a = 1;
       console.log(index, '位置2')
       wx.request({
-        url: 'http://www.causgh.com:1996/wechat_control',
+        url: 'http://localhost:1996/w_manual',
         method: "POST",
         data: {
           'data': index,

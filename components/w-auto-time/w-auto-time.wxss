@@ -13,6 +13,30 @@
   background-color: #2caf6d;
   color: #aadfc4;
 }
-.job_list{
-  
+.button_txt{
+  font-family:'黑体' ;
+}
+.task_list{
+  background: red;
+  height:100%;
+  align-self: center;
+  margin-top: 10rpx;
+
+}
+.task{
+  background: rgb(0, 255, 0);
+  height:100rpx;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-right:2.5%;
+  margin-top: 1%;
+  font-size:130%;
+  display: flex;    /*设置显示样式**/
+  align-items: center;    /**子view垂直居中*/
+}
+
+.task_button{
+  background: rgb(217, 255, 0);
+  float:right;
+  margin-right: 1%;
 }

@@ -5,9 +5,8 @@ Page({
   data: {
     task: {
       name: '',
-     
-      signTime: '00:00',
-     
+      beginTime: '00:00',
+      endTime: '00:00',
       startDay: '2016-11-00',
       endDay: '2016-11-00',
       repeat: {
@@ -18,7 +17,9 @@ Page({
         'friday': 1,
         'saturday': 0,
         'sunday': 0
-      }
+      },
+      select_relay: []
+     
     },
     openId: '',
     userInfo: {},
@@ -37,16 +38,26 @@ Page({
     });
   },
 
-  // 设置打卡时间
-  setSignTime: function (e) {
+  // 设置开始时间
+  setBeginTime: function (e) {
     var that = this;
     var hour = ((+e.detail.value.slice(0, 2) + 24 - 2) % 24).toString();
     that.setData({
-      'task.signTime': e.detail.value,
-      'task.signEarlyTime': (hour[1] ? hour : '0' + hour) + ':' + e.detail.value.slice(3, 5)
+      'task.beginTime': e.detail.value,
     });
   },
+
   
+  // 设置结束时间
+  setEndTime: function (e) {
+    var that = this;
+    var hour = ((+e.detail.value.slice(0, 2) + 24 - 2) % 24).toString();
+    that.setData({
+      'task.endTime': e.detail.value,
+    });
+  },
+
+
   // 设置开始日期
   startDateChange: function (e) {
     this.setData({
@@ -105,79 +116,67 @@ Page({
     });
   },
 
-  // 隐藏提示弹层
-  modalChange: function (e) {
+  //设置选定的Relay数组
+  selectRelay(event) {
     this.setData({
-      modalHidden: true
+      'task.select_relay': event.detail.select_pipe
     })
+    console.log(this.data.task.select_relay)
   },
-  // 取消创建任务
+
+  // 取消创建
   bindcancel:function(){
     wx.navigateBack({
       delta:1
     })
 
   },
-
   // 创建任务
   createTask: function () {
     var that = this;
     var task = this.data.task;
-    var openId = this.data.openId;
-    var userInfo = this.data.userInfo;
-    console.log('新建函数')
-    wx.navigateTo({
-      url: '/pages/control/control',
+    console.log('新建函数');  
+    wx.request({
+      url: 'http://localhost:1996/w_time_new_task',
+      method: 'POST', 
+      data: {
+        'task_name': task.name,
+        'new_task':{
+          'startDay': task.startDay,
+          'endDay': task.endDay,
+          'beginTime': task.beginTime,
+          'endTime': task.endTime,
+          'repeat': {
+            'monday': task.repeat.monday,
+            'tuesday': task.repeat.tuesday,
+            'wednesday': task.repeat.wednesday,
+            'thursday': task.repeat.thursday,
+            'friday': task.repeat.friday,
+            'saturday': task.repeat.saturday,
+            'sunday': task.repeat.sunday,
+            },
+          'select_relay': task.select_relay
+        },
+      },  
+
+      success: function(res){
+        console.log(res.data)
+        wx.showToast({
+          title: '新建中...',
+          icon: 'loading',
+          duration: 200,
+          success: function () {
+            setTimeout(function () {
+              wx.navigateBack({
+                delta: 1
+              })
+            }, 200);
+          }
+        });
+
+      }
     })
-
-    wx.showToast({
-      title: '新建中',
-      icon: 'loading',
-      duration: 1000
-    });
-
-    // wx.request({
-    //   url: 'https://www.cpcsign.com/api/task',
-    //   data: {
-    //     name: task.name,
-    //     address: task.address,
-    //     startTime: task.startDay,
-    //     endTime: task.endDay,
-    //     signTime: task.signTime,
-    //     latitude: task.latitude,
-    //     longitude: task.longitude,
-    //     repeat: {
-    //       'monday': task.repeat.monday,
-    //       'tuesday': task.repeat.tuesday,
-    //       'wednesday': task.repeat.wednesday,
-    //       'thursday': task.repeat.thursday,
-    //       'friday': task.repeat.friday,
-    //       'saturday': task.repeat.saturday,
-    //       'sunday': task.repeat.sunday
-    //     },
-    //     userInfo: {
-    //       openId: openId,
-    //       nickName: userInfo.nickName,
-    //       avatarUrl: userInfo.avatarUrl
-
-    //     }
-    //   },
-    //   method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-    //   header: {
-    //     'Content-Type': 'application/json'
-    //   }, // 设置请求的 header
-    //   success: function(res){
-    //     // success
-
-    //     wx.hideToast();
-        
-    //     var command = res.data.taskID;
-
-    //     wx.navigateTo({
-    //       url: '/pages/new/success/success?command=' + command,
-    //     })
-    //   }
-    // })
+ 
   },
 
   // 提交、检验
@@ -186,7 +185,7 @@ Page({
     var task = this.data.task;
     var creating = this.data.creating;
 
-    if (task.name == '' || task.address == '点击选择地点' ) {
+    if (task.name == '') {
       this.setData({
         modalHidden: false
       });

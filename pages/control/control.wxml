@@ -4,10 +4,10 @@
 
 
 <!-----如果选中'手动'展示  switch  ------->
-<w-switch wx:if="{{currentType=='手动'}}"/>
+<!-- <w-switch wx:if="{{currentType=='手动'}}"/> -->
 
 
 <!-----如果选中'定时'展示  time  ------->
-<view>调试中------调试完毕请修改control.wxml</view>
 
-<w-auto-time wx:if="{{currentType=='定时'}}"/>
+<w-auto-time wx:if="{{true}}"></w-auto-time>
+<view>调试中------调试完毕请修改control.wxml</view>

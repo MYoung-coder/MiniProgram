@@ -16,13 +16,13 @@
         <view class="mod t-sign-time">
             <text class="key">开始时间</text>
             
-            <picker mode="time" value="{{task.signTime}}" bindchange="setSignTime">
+            <picker mode="time" value="{{task.signTime}}" bindchange="setBeginTime">
                 <view class="value">{{task.signTime}}<image class="arrow-r" src="/components/w-auto-time/image/arrow-r-0.png"></image></view>
             </picker>
             
             <text class="key">结束时间</text>
             
-            <picker mode="time" value="{{task.signTime}}" bindchange="setSignTime">
+            <picker mode="time" value="{{task.signTime}}" bindchange="setEndTime">
                 <view class="value">{{task.signTime}}<image class="arrow-r" src="/components/w-auto-time/image/arrow-r-0.png"></image></view>
             </picker>
 
@@ -65,14 +65,15 @@
             </view>
         </view>
     </view>
-
+  <!-- 开关选择 -->
     <view class="checkbox">
-        <!-- 开关选择 -->
         <view class="checkbox_key">
             <text class="checkbox_name">开关选择</text>
         </view>
-        <w-add-checkbox />
+        <w-add-checkbox name="{{name}}" age="{{age}}" bindselectRelay="selectRelay"/>
     </view>
+  
+
 
     <!-- 创建按钮 -->
     <view class="create">
